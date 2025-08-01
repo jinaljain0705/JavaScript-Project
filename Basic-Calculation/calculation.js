@@ -1,16 +1,16 @@
-let A = 50, B = 10;
+let X = 50, Y = 10;
 
 console.log("==== Arithmetic Calculator ====");
 
-console.log(`Value of X: ${x}`);
-console.log(`Value of Y: ${y}`);
+console.log(`Value of X: ${X}`);
+console.log(`Value of Y: ${Y}`);
 
 console.log("-----------------------------");
 
-console.log(`1. Addition        (X + Y) : ${x} + ${y} = ${x + y}`);
-console.log(`2. Subtraction     (X - Y) : ${x} - ${y} = ${x - y}`);
-console.log(`3. Multiplication  (X * Y) : ${x} * ${y} = ${x * y}`);
-console.log(`4. Division        (X / Y) : ${y !== 0 ? `${x} / ${y} = ${x / y}` : "Cannot divide by zero"}`);
-console.log(`5. Modulus         (X % Y) : ${y !== 0 ? `${x} % ${y} = ${x % y}` : "Cannot divide by zero"}`);
+console.log(`1. Addition        (X + Y) : ${X} + ${Y} = ${X + Y}`);
+console.log(`2. Subtraction     (X - Y) : ${X} - ${Y} = ${X - Y}`);
+console.log(`3. Multiplication  (X * Y) : ${X} * ${Y} = ${X * Y}`);
+console.log(`4. Division        (X / Y) : ${Y !== 0 ? `${X} / ${Y} = ${X / Y}` : "Cannot divide by zero"}`);
+console.log(`5. Modulus         (X % Y) : ${Y !== 0 ? `${X} % ${Y} = ${X % Y}` : "Cannot divide by zero"}`);
 
 console.log("-----------------------------");
