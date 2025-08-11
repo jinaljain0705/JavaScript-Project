@@ -1,12 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Life Assistant</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    
+    <h1>Smart Life Assistant</h1>
+
+    <label for="choice">Choose an option:</label>
+    <select id="choice">
+        <option>1. Fitness Suggestion System</option>
+        <option>2. Monthly Budget Planner</option>
+        <option>3. Mobile Data Usage Alert System</option>
+        <option>4. Change Password Logic</option>
+    </select>
+
+    <button>Run</button>
+
+    <h3>Output:</h3>
 </body>
-    <script></script>
+
+<script>
+    let choice = prompt("Menu:\n 1. Fitness Suggestion System\n 2. Monthly Budget Planner\n 3. Mobile Data Usage Alert System\n 4. Change Password\n \n Enter 1, 2, 3 or 4: ");
+    if (choice === null) {
+        alert("No choice entered. Refresh to try again.");
+    } else {
+        choice = choice.trim();
+
+        if (choice === "1") {
+            let ageStr = prompt("Enter your age (years):");
+            if (ageStr === null) {
+                alert("Cancelled.");
+            } else {
+                let age = parseInt(ageStr.trim());
+                if (isNaN(age) || age <= 0) {
+                    alert("Invalid age entered.");
+                } else {
+                    let weightStr = prompt("Enter your weight (kg):");
+                    if (weightStr === null) {
+                        alert("Cancelled.");
+                    } else {
+                        let weight = parseFloat(weightStr.trim());
+                        if (isNaN(weight) || weight <= 0) {
+                            alert("Invalid weight entered.");
+                        } else {
+                            let message = "";
+
+                            if (age < 18) {
+                                if (weight < 40) {
+                                    message = "You are underweight for your age. Consider a healthy diet and consult a guardian/doctor.";
+                                } else if (weight >= 40 && weight <= 60) {
+                                    message = "You are fit for your age group. Keep up the good habits!";
+                                } else {
+                                    message = "You are overweight for your age. Consider balanced diet and more activity.";
+                                }
+                            } else if (age >= 18 && age <= 30) {
+                                if (weight < 50) {
+                                    message = "You are underweight for your age. Consider a nutritious diet to gain healthy weight.";
+                                } else if (weight >= 50 && weight <= 75) {
+                                    message = "You are fit for your age group. Keep doing what you're doing!";
+                                } else {
+                                    message = "You are overweight for your age. Consider a balanced diet and exercise.";
+                                }
+                            } else if (age >= 31 && age <= 50) {
+                                if (weight < 55) {
+                                    message = "You are underweight for your age. Ensure adequate protein and strength training.";
+                                } else if (weight >= 55 && weight <= 80) {
+                                    message = "You are fit for your age group. Maintain a steady routine.";
+                                } else {
+                                    message = "You are overweight for your age. Reduce sedentary time and review diet.";
+                                }
+                            } else {
+                                if (weight < 50) {
+                                    message = "You are underweight for your age. Check bone and muscle health with a doctor.";
+                                } else if (weight >= 50 && weight <= 75) {
+                                    message = "You are fit for your age group. Stay active and monitor health.";
+                                } else {
+                                    message = "You are overweight for your age. Discuss weight management with your healthcare provider.";
+                                }
+                            }
+
+                            alert(message);
+                        }
+                    }
+                }
+            }
+
+        } else if (choice === "2") {
+            let incomeStr = prompt("Enter your monthly income (₹):");
+            if (incomeStr === null) {
+                alert("Cancelled.");
+            } else {
+                let income = parseFloat(incomeStr.trim());
+                if (isNaN(income) || income < 0) {
+                    alert("Invalid income entered.");
+                } else {
+                    if (income < 10000) {
+                        alert("Spend cautiously and save more!");
+                    } else if (income >= 10000 && income <= 30000) {
+                        alert("Balanced budget! Keep an emergency fund and track expenses.");
+                    } else if (income > 30000) {
+                        alert("Your income is great! Consider investing in SIPs or other options.");
+                    } else {
+                        alert("Unable to evaluate income.");
+                    }
+                }
+            }
+
+        } else if (choice === "3") {
+            let dataStr = prompt("Enter total mobile data used this month (in GB):");
+            if (dataStr === null) {
+                alert("Cancelled.");
+            } else {
+                let data = parseFloat(dataStr.trim());
+                if (isNaN(data) || data < 0) {
+                    alert("Invalid data amount entered.");
+                } else {
+                    if (data < 5) {
+                        alert("Low usage.");
+                    } else if (data >= 5 && data <= 15) {
+                        alert("Normal usage.");
+                    } else if (data > 15) {
+                        alert("Heavy usage — consider upgrading to a bigger data plan.");
+                    } else {
+                        alert("Unable to evaluate usage.");
+                    }
+                }
+            }
+
+        } else if (choice === "4") {
+            let hardcodedOld = "password123";
+
+            let oldP = prompt("Enter your old password:");
+            if (oldP === null) {
+                alert("Cancelled.");
+            } else {
+                if (oldP === hardcodedOld) {
+                    let newP = prompt("Enter new password:");
+                    if (newP === null) {
+                        alert("Cancelled.");
+                    } else {
+                        let confirmP = prompt("Confirm new password:");
+                        if (confirmP === null) {
+                            alert("Cancelled.");
+                        } else {
+                            if (newP === confirmP) {
+                                alert("Password changed successfully.");
+                            } else {
+                                alert("Passwords do not match.");
+                            }
+                        }
+                    }
+                } else {
+                    alert("Old password is incorrect.");
+                }
+            }
+
+        } else {
+            alert("Invalid menu choice. Please enter 1, 2, 3 or 4.");
+        }
+    }
+
+</script>
+
 </html>
