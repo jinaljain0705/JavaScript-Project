@@ -37,6 +37,3 @@ It performs addition, subtraction, multiplication, division, and modulus, then d
 3. View the results in the console output.
 
 ---
-
-If you want, I can also make a **fun, beginner-friendly version** with emojis and math symbols so the README feels more interactive and engaging.
-
