@@ -30,10 +30,9 @@ Meet **Smart Life Assistant** – a single-page, interactive buddy that helps yo
 
 ## 🛠 Tech That Runs the Magic
 
-* **HTML** – The skeleton 🦴
-* **CSS** – The outfit 👕
-* **JavaScript** – The brain 🧠
-
+* HTML – Structure
+* CSS – Styling
+* JavaScript – Logic & Interaction
 ---
 
 ## 🎯 How to Use
